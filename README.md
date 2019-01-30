@@ -1,1 +1,1 @@
-# regex-vm
+# regex-machine

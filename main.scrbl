@@ -3,19 +3,19 @@
 @(require (for-label racket/base
                      racket/contract/base
                      racket/math
-                     regex-vm)
+                     regex-machine)
           scribble/example)
 
 @(define module-sharing-evaluator-factory
-   (make-base-eval-factory (list 'racket/base 'regex-vm)))
+   (make-base-eval-factory (list 'racket/base 'regex-machine)))
 
 @(define (make-evaluator)
    (define evaluator (module-sharing-evaluator-factory))
-   (evaluator '(require regex-vm))
+   (evaluator '(require regex-machine))
    evaluator)
 
 @title{Regex Machine Language}
-@defmodule[regex-vm]
+@defmodule[regex-machine]
 
 @section{Programs and Instructions}
 
@@ -197,7 +197,7 @@
               (jmp-instruction 0)
               (char-instruction #\b)
               match-instruction))
-   
+
    (define aab-vm
      (vm multiple-as-then-one-b "aab"))
 

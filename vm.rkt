@@ -26,7 +26,7 @@
          pict/convert
          racket/list
          racket/math
-         regex-vm/program)
+         regex-machine/program)
 
 (module+ test
   (require (submod "..")
@@ -357,7 +357,7 @@
       (define machine (vm trivial-match-program "a"))
       (check-equal? (vm-status machine) 'running)
       (check-equal? (vm-status (vm-step machine)) 'failure)))
-    
+
   (test-case "trivial-char-program"
     (define trivial-char-program
       (program (char-instruction #\a)
@@ -401,15 +401,15 @@
     (define machine/split (vm-run machine #:steps 1))
     (check-equal? (vm-status machine/split) 'running)
     (check-equal? (vm-thread-count machine/split) 2)
-    
+
     (test-case "first-branch-matches"
       (define machine (vm trivial-split-program "a"))
       (check-equal? (vm-status (vm-run machine #:steps 3)) 'success))
-    
+
     (test-case "second-branch-matches"
       (define machine (vm trivial-split-program "b"))
       (check-equal? (vm-status (vm-run machine #:steps 3)) 'success))
-    
+
     (test-case "neither-branch-matches"
       (define machine (vm trivial-split-program "z"))
       (check-equal? (vm-status (vm-run machine #:steps 2)) 'failure)))

@@ -2,7 +2,7 @@
 
 (require pict
          racket/gui
-         regex-vm)
+         regex-machine)
 
 (define (step-visualizer f init-string from-string to-pict)
   (define state (box #f))

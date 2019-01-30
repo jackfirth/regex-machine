@@ -1,3 +1,3 @@
 #lang reprovide
-regex-vm/program
-regex-vm/vm
+regex-machine/program
+regex-machine/vm
