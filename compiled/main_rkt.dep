@@ -1,0 +1,1 @@
+("7.0" ("d03ad1410db7bc99dca43d875f45de98a803ce29" . "21dde980444bd69efaee50b5487c73c134cf5dc3") (collects #"racket" #"runtime-config.rkt") (collects #"regex-vm" #"program.rkt") (collects #"regex-vm" #"vm.rkt") (collects #"reprovide" #"main.rkt"))
