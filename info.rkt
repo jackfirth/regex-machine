@@ -12,7 +12,8 @@
         "pict-lib"
         "reprovide-lang"))
 
-(define build-deps '("racket-doc"
+(define build-deps '("rackunit-lib"
+                     "racket-doc"
                      "scribble-lib"))
 
 (define scribblings
