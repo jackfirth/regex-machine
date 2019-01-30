@@ -24,7 +24,8 @@
   (define input-field
     (new text-field%
          [parent controls-pane]
-         [label "Input"]))
+         [label "Input"]
+         [init-value init-string]))
   (define reset-button
     (new button%
          [parent controls-pane]
@@ -45,8 +46,24 @@
   (set-state! (from-string init-string))
   (send frame show #t))
 
+(define char-instruction-demo-program
+  (program (char-instruction #\a)
+           (char-instruction #\b)
+           (char-instruction #\c)
+           match-instruction))
+
+(define jmp-instruction-demo-program
+  (program (char-instruction #\a)
+           (jmp-instruction 4)
+           (char-instruction #\b)
+           (char-instruction #\c)
+           match-instruction))
+
 (module+ main
   (step-visualizer vm-step
                    "aaabc"
-                   (λ (input-string) (vm example-program input-string))
-                   (λ (machine) (vm-pict machine #:hide-input? #t))))
+                   (λ (input-string)
+                     (vm example-program
+                         input-string))
+                   (λ (machine)
+                     (and machine (vm-pict machine #:hide-input? #t)))))
