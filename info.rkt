@@ -2,9 +2,9 @@
 
 (define empty-list (list))
 
-(define pkg-name "regex-vm")
+(define pkg-name "regex-machine")
 
-(define collection "regex-vm")
+(define collection "regex-machine")
 
 (define deps
   (list "base"
@@ -19,4 +19,4 @@
   (list (list "main.scrbl"
               empty-list
               (list "Teaching")
-              "regex-vm")))
+              "regex-machine")))
