@@ -16,7 +16,7 @@ To use this code, you'll need to install the [Racket](http://racket-lang.org/) p
 This code is available as a Racket *package* named `regex-machine`, meaning that Racket can
 automatically download and install this code without you having to do anything more than tell Racket
 the name of the package. **You do not need to clone this Git repository or download a ZIP folder of
-its code.*** Racket will do that for you using the Racket *package manager*. There are two ways you
+its code.** Racket will do that for you using the Racket *package manager*. There are two ways you
 can do this:
 
 1. Through DrRacket (recommended). Open up the DrRacket program (which is included with Racket out
