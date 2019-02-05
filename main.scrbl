@@ -178,16 +178,16 @@
    (vm-input example-vm))}
 
 @defproc[(vm-status [machine vm?])
-         (or/c 'not-finished 'matching-success 'matching-failure)]{
+         (or/c 'running 'success 'failure)]{
  Returns the current status of @racket[machine]. A VM can have one of three
  statuses:
 
  @itemlist[
- @item{@emph{not finished} --- the VM has not finished running the program.}
- @item{@emph{matching success} -- the VM successfully matched the input string
-   with the program.}
- @item{@emph{matching failure} --- the VM determined that the input string does
-   not match the program.}]
+ @item{@emph{running} --- the VM has not finished running the program.}
+ @item{@emph{success} -- the VM successfully matched the input string with the
+   program.}
+ @item{@emph{failure} --- the VM determined that the input string does not match
+   the program.}]
 
  @(examples
    #:eval (make-evaluator) #:once
