@@ -47,5 +47,5 @@ very configurable however.
 
 [circleci]: https://circleci.com/gh/jackfirth/regex-machine
 [circleci-badge]: https://circleci.com/gh/jackfirth/regex-machine.svg?style=svg
-[docs]: http://docs.racket-lang.org/regex-vm/index.html
+[docs]: http://docs.racket-lang.org/regex-machine/index.html
 [docs-badge]: https://img.shields.io/badge/docs-published-blue.svg
