@@ -1,4 +1,4 @@
-# regex-machine [![CircleCI](https://circleci.com/gh/jackfirth/regex-machine.svg?style=svg)](https://circleci.com/gh/jackfirth/regex-machine)
+# regex-machine [![CircleCI][circleci-badge]][circleci] [![Documentation][docs-badge]][docs]
 
 This is an implementation of a virtual machine for Russ Cox's regular expression machine language.
 This is *not* a parser for the language; instructions must be written in Racket as expressions like
@@ -37,10 +37,15 @@ Racket tools working, you can install this package by running the command
 
 You can check that the package installed successfully by opening DrRacket and running the code
 `(require regex-machine)`, including the parentheses. This makes all of the functions defined in
-this package available to you for use. See this package's documentation for the details of those
-functions.
+this package available to you for use. See this package's [documentation][docs] for the details of
+those functions.
 
 ## GUI
 
 You can run the GUI by executing `(require (submod regex-machine/gui main))` in DrRacket. It's not
 very configurable however.
+
+[circleci]: https://circleci.com/gh/jackfirth/regex-machine
+[circleci-badge]: https://circleci.com/gh/jackfirth/regex-machine.svg?style=svg
+[docs]: http://docs.racket-lang.org/regex-vm/index.html
+[docs-badge]: https://img.shields.io/badge/docs-published-blue.svg
